@@ -7,6 +7,13 @@ public class Garage {
 
     //attribut : propriété de l'objet
     // propriété de mon Garage
+
+    /**
+     * encapsulation
+     * private : seule la classe courante à accès à l'information
+     * public : tout le monde à accès à l'information
+     * protected : seules les classes filles et la classe courante ont accès à l'information
+     */
     private String nom;
 
     private String adresse;
