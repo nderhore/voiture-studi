@@ -34,6 +34,10 @@ public class Garage {
         voitureList = new ArrayList<>();
     }
 
+    /**
+     * Polymorphisme : redefinir des méthodes des méthodes deja existante
+     *
+     */
     public String toString(){
         return "bonjour je suis le garage " + nom + ", je suis à l'adresse " + adresse +
                 ", je peux stocker " + nombrePlaceVoiture + " voitures.";

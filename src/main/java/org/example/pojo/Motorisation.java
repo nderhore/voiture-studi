@@ -12,4 +12,27 @@ public class Motorisation {
         this.nombreChevaux = nombreChevaux;
     }
 
+    public TypeCarburant getTypeCarburant() {
+        return typeCarburant;
+    }
+
+    public void setTypeCarburant(TypeCarburant typeCarburant) {
+        this.typeCarburant = typeCarburant;
+    }
+
+    public Integer getNombreChevaux() {
+        return nombreChevaux;
+    }
+
+    public void setNombreChevaux(Integer nombreChevaux) {
+        this.nombreChevaux = nombreChevaux;
+    }
+
+    @Override
+    public String toString() {
+        return "Motorisation{" +
+                "typeCarburant=" + typeCarburant +
+                ", nombreChevaux=" + nombreChevaux +
+                '}';
+    }
 }

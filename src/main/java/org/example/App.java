@@ -1,10 +1,9 @@
 package org.example;
 
 
-import org.example.pojo.Garage;
-import org.example.pojo.Hangar;
-import org.example.pojo.Marque;
-import org.example.pojo.TypeCarburant;
+import org.example.dao.MotorisationDao;
+import org.example.dao.impl.MotorisationDaoImpl;
+import org.example.pojo.*;
 
 import java.io.IOException;
 import java.util.InputMismatchException;
@@ -14,20 +13,39 @@ import java.util.Scanner;
  * Hello world!
  *
  */
-public class App 
+public class App
 {
     public static void main( String[] args )
     {
-        //Garage monGarage = createGarage();
+        MotorisationDao motorisationDao = new MotorisationDaoImpl();
+
+        //Création d'un moteur
+        motorisationDao.saveMotorisation(new Motorisation(TypeCarburant.DIESEL,
+                150));
+        motorisationDao.saveMotorisation(new Motorisation(TypeCarburant.ESSENCE,
+                150));
+
+        //recuperation des moteurs
+        System.out.println(motorisationDao.getAllMotorisation());
+
+        //suppression des moteurs diesel
+        motorisationDao.deleteMotorisationByCarburant(TypeCarburant.DIESEL);
+
+        //recuperation des moteurs
+        System.out.println(motorisationDao.getAllMotorisation());
+
+        /**
+        Garage monGarage = createGarage();
         //System.out.println(monGarage);
 
-        Garage unGarage = new Hangar("toto","titi",2);
+        Garage unGarage = new Garage("toto","titi",2);
         boolean result = unGarage instanceof Garage;
-        System.out.println("est ce unGarage est un garage ? " + result);
+        System.out.println("est ce que unGarage est un garage ? " + result);
         boolean resultTwo = unGarage instanceof Hangar;
-        System.out.println("est ce unGarage est un garage ? " + resultTwo);
+        System.out.println("est ce que unGarage est un hangar ? " + resultTwo);
 
         Marque marque = new Marque("test");
+         **/
 
     }
 
