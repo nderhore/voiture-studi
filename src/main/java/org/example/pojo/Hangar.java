@@ -4,7 +4,8 @@ public class Hangar extends Garage{
 
 
     public Hangar(String nomGarage, String adresse, Integer nombrePlace){
-      super(nomGarage,adresse,nombrePlace);
+
+        super(nomGarage,adresse,nombrePlace);
     }
 
 }
