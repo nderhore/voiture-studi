@@ -18,10 +18,10 @@ public class App
 {
     public static void main( String[] args )
     {
-        /*
+
         MotorisationDao motorisationDao = new MotorisationDaoImpl();
 
-        //Création d'un moteur
+        //Création de plusieurs moteurs
         motorisationDao.saveMotorisation(new Motorisation(TypeCarburant.DIESEL,
                 150));
         motorisationDao.saveMotorisation(new Motorisation(TypeCarburant.ESSENCE,
@@ -36,7 +36,7 @@ public class App
         //recuperation des moteurs
         System.out.println(motorisationDao.getAllMotorisation());
 
-*/
+     /*
         try {
             Garage monGarage = createGarage();
         }
@@ -53,7 +53,7 @@ public class App
         System.out.println("est ce que unGarage est un hangar ? " + resultTwo);
 
         Marque marque = new Marque("test");
-
+*/
 
     }
 
